@@ -21,7 +21,9 @@
     --gold-2:#B98B2E;
     --coral:#E54B61;
     --green:#128A68;
-    --muted:#6B7690;
+    --muted:#8A90A3;
+    --silver:#AEB4C2;
+    --bronze:#C77F45;
     --border:#E7EAF2;
     --shadow: 0 1px 2px rgba(11,29,76,0.04), 0 20px 44px -20px rgba(11,29,76,0.22);
   }
@@ -582,6 +584,7 @@
     <div class="nav-links">
       <a href="#app">O app</a>
       <a href="#clubes">Clubes</a>
+      <a href="#ranking">Ranking</a>
       <a href="#relogios">Relógios</a>
       <a href="#recursos">Recursos</a>
     </div>
@@ -666,20 +669,10 @@
                     <div style="font-size:7.5px; color:var(--muted);">no clube</div>
                   </div>
                 </div>
-                <div class="row-p" style="justify-content:space-between; margin-top:2px;">
-                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10.5px;">Hoje</span>
-                  <span style="font-size:9px; color:var(--blue); font-weight:600;">Seu plano</span>
-                </div>
-                <div class="card-p row-p" style="padding:9px 10px;">
-                  <div style="width:26px;height:26px;border-radius:8px;background:var(--blue-soft); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M9 21l2-6 -2-3 1-5 4 1 2 4h3M9 15l-3 2v4"/></svg>
-                  </div>
-                  <div style="flex:1;"><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:9.5px;">Corrida leve</div><div style="font-size:7px; color:var(--muted);">30-40 min · ritmo confortável</div></div>
-                  <div style="background:var(--blue); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:8px; padding:6px 10px; border-radius:8px;">Iniciar</div>
-                </div>
+                <div style="background:var(--blue); color:#fff; text-align:center; padding:11px; border-radius:12px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:11px; margin-top:2px;">Iniciar corrida</div>
                 <div class="row-p" style="justify-content:space-between; margin-top:2px;">
                   <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10.5px;">Clube Belz</span>
-                  <span style="font-size:9px; color:var(--blue); font-weight:600;">Ver ranking</span>
+                  <span style="font-size:9px; color:var(--blue); font-weight:600;">📰 Notícias</span>
                 </div>
                 <div class="card-p row-p" style="padding:9px 10px;">
                   <div style="display:flex;">
@@ -1031,7 +1024,7 @@
                   <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 21v-1a6 6 0 0 1 12 0v1"/></svg>
                   Clube Belz
                 </div>
-                <div style="width:100%; border:1.5px solid var(--blue); background:var(--blue-soft); color:var(--blue); text-align:center; padding:8px; border-radius:10px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:9.5px; margin-top:4px;">+ Convidar pra sua próxima corrida</div>
+                <div style="width:100%; background:var(--blue); color:#fff; text-align:center; padding:9px; border-radius:12px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:9.5px; margin-top:4px;">+ Convidar pra sua próxima corrida</div>
                 <div class="row-p" style="text-align:center; width:100%; padding:7px 0 3px; border-top:1px solid var(--border);">
                   <div style="flex:1;"><div class="stat-p" style="font-size:15px;">42,8</div><div style="font-size:7px; color:var(--muted);">km mês</div></div>
                   <div style="flex:1;"><div class="stat-p" style="font-size:15px;">186</div><div style="font-size:7px; color:var(--muted);">pontos</div></div>
@@ -1048,7 +1041,6 @@
                 </div>
                 <div class="row-p" style="width:100%; justify-content:space-between; margin-top:4px;">
                   <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10px;">Últimas corridas</span>
-                  <span style="font-size:8.5px; color:var(--blue); font-weight:600;">Ver todas</span>
                 </div>
                 <div class="card-p row-p" style="width:100%; padding:7px 10px;">
                   <div style="width:20px;height:20px;border-radius:6px;background:var(--blue-soft); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M9 21l2-6 -2-3 1-5 4 1 2 4h3M9 15l-3 2v4"/></svg></div>
@@ -1324,10 +1316,116 @@
       </div>
     </section>
 
-    <!-- ============ KM 7 — CORRIDA MARCADA ============ -->
+    <!-- ============ KM 7 — RANKING DO CLUBE ============ -->
+    <section class="section" id="ranking" style="padding-left:0; padding-right:0;">
+      <div class="section-head reveal">
+        <div class="km-marker" style="justify-content:center;"><span class="dot"></span>KM 7 · Ranking</div>
+        <h2>Pódio, evolução de ritmo, e quem apareceu no desafio.</h2>
+        <p>A aba Ranking só aparece pra quem tem clube — corrida livre não pontua, então não faria sentido mostrar um ranking vazio. Pódio com os 3 primeiros, lista completa por pontos, quem confirmou presença no desafio mais recente, e um comparativo de quem mais melhorou o ritmo.</p>
+      </div>
+      <div class="showcase-track">
+        <div class="showcase-item reveal">
+          <div class="phone">
+            <div class="notch"></div>
+            <div class="screen">
+              <div class="statusbar"><span>9:41</span><span class="dots"><i></i><i></i><i></i></span></div>
+              <div style="padding:16px 18px 14px; flex:1; display:flex; flex-direction:column; gap:9px; overflow:hidden;">
+                <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px;">Ranking</div>
+                <div class="row-p" style="align-items:flex-end; justify-content:center; gap:10px; padding:4px 0 2px;">
+                  <div style="text-align:center;">
+                    <div style="width:34px;height:34px;border-radius:17px;background:var(--silver); display:flex; align-items:center; justify-content:center; margin:0 auto 3px;"><span style="font-size:11px; font-weight:700; color:#4A4F5C;">BL</span></div>
+                    <div style="font-size:7px; font-weight:600;">Bruna</div>
+                    <div class="stat-p" style="font-size:9px;">186 pts</div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div style="width:42px;height:42px;border-radius:21px;background:var(--gold); display:flex; align-items:center; justify-content:center; margin:0 auto 3px;"><span style="font-size:13px; font-weight:700; color:#5B4310;">GB</span></div>
+                    <div style="font-size:7.5px; font-weight:600;">Grupo Belz</div>
+                    <div class="stat-p" style="font-size:10px;">238 pts</div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div style="width:34px;height:34px;border-radius:17px;background:var(--bronze); display:flex; align-items:center; justify-content:center; margin:0 auto 3px;"><span style="font-size:11px; font-weight:700; color:#4A2A10;">DS</span></div>
+                    <div style="font-size:7px; font-weight:600;">Diego</div>
+                    <div class="stat-p" style="font-size:9px;">171 pts</div>
+                  </div>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px; margin-top:2px;">
+                  <div class="card-p row-p" style="padding:7px 10px; border:1.5px solid var(--blue);">
+                    <span style="font-size:9px; color:var(--muted); width:14px; text-align:center;">4</span>
+                    <div class="avatar-p" style="width:22px;height:22px;font-size:8px;background:var(--blue-2);">VC</div>
+                    <span style="flex:1; font-size:9.5px; font-weight:700;">Você</span>
+                    <span class="stat-p" style="font-size:9px; color:var(--blue);">152 pts</span>
+                  </div>
+                  <div class="card-p row-p" style="padding:7px 10px;">
+                    <span style="font-size:9px; color:var(--muted); width:14px; text-align:center;">5</span>
+                    <div class="avatar-p" style="width:22px;height:22px;font-size:8px;background:var(--green);">JM</div>
+                    <span style="flex:1; font-size:9.5px; font-weight:600;">João Marcos</span>
+                    <span class="stat-p" style="font-size:9px; color:var(--blue);">140 pts</span>
+                  </div>
+                </div>
+                <div style="font-size:9px; font-weight:700; margin-top:4px;">Quem fez: Corrida do Parque</div>
+                <div style="font-size:7.5px; color:var(--muted); margin-top:-4px;">4 pessoas confirmaram presença</div>
+                <div class="card-p" style="padding:0; overflow:hidden;">
+                  <div class="row-p" style="padding:7px 9px;"><span style="flex:1; font-size:8.5px; font-weight:600;">Bruna Lima</span><span style="font-size:7.5px; color:var(--muted);">06:18</span></div>
+                  <div class="row-p" style="padding:7px 9px; border-top:1px solid var(--border);"><span style="flex:1; font-size:8.5px; font-weight:600;">Diego Souza</span><span style="font-size:7.5px; color:var(--muted);">06:21</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cap"><b>Pódio e ranking</b>1º, 2º e 3º lugar em destaque nas cores ouro, prata e bronze, sua posição sempre marcada na lista, e a lista de quem confirmou presença no desafio mais recente do clube logo abaixo.</div>
+        </div>
+        <div class="showcase-item reveal reveal-delay-1">
+          <div class="phone">
+            <div class="notch"></div>
+            <div class="screen">
+              <div class="statusbar"><span>9:41</span><span class="dots"><i></i><i></i><i></i></span></div>
+              <div style="padding:16px 18px 14px; flex:1; display:flex; flex-direction:column; gap:9px;">
+                <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px;">Evolução de ritmo</div>
+                <div style="font-size:8px; color:var(--muted); margin-top:-4px;">Quem mais melhorou o ritmo do desafio mais recente em relação ao anterior.</div>
+                <div class="card-p" style="padding:10px; margin-top:2px;">
+                  <div class="row-p" style="justify-content:space-between; margin-bottom:7px;">
+                    <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10px;">1º Bruna</span>
+                    <span style="font-size:8px; color:var(--green); font-weight:700;">-0'22" de melhora</span>
+                  </div>
+                  <div class="row-p" style="gap:6px; margin-bottom:4px;">
+                    <span style="font-size:6.5px; color:var(--muted); width:34px; font-weight:700;">ANTES</span>
+                    <div style="flex:1; height:6px; background:var(--blue-soft); border-radius:6px; overflow:hidden;"><div style="height:100%; width:92%; background:var(--muted);"></div></div>
+                    <span style="font-size:6.5px; width:38px; text-align:right;">6'12"/km</span>
+                  </div>
+                  <div class="row-p" style="gap:6px;">
+                    <span style="font-size:6.5px; color:var(--muted); width:34px; font-weight:700;">AGORA</span>
+                    <div style="flex:1; height:6px; background:var(--blue-soft); border-radius:6px; overflow:hidden;"><div style="height:100%; width:78%; background:var(--green);"></div></div>
+                    <span style="font-size:6.5px; color:var(--green); font-weight:700; width:38px; text-align:right;">5'50"/km</span>
+                  </div>
+                </div>
+                <div class="card-p" style="padding:10px;">
+                  <div class="row-p" style="justify-content:space-between; margin-bottom:7px;">
+                    <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10px;">2º Diego</span>
+                    <span style="font-size:8px; color:var(--green); font-weight:700;">-0'14" de melhora</span>
+                  </div>
+                  <div class="row-p" style="gap:6px; margin-bottom:4px;">
+                    <span style="font-size:6.5px; color:var(--muted); width:34px; font-weight:700;">ANTES</span>
+                    <div style="flex:1; height:6px; background:var(--blue-soft); border-radius:6px; overflow:hidden;"><div style="height:100%; width:96%; background:var(--muted);"></div></div>
+                    <span style="font-size:6.5px; width:38px; text-align:right;">6'34"/km</span>
+                  </div>
+                  <div class="row-p" style="gap:6px;">
+                    <span style="font-size:6.5px; color:var(--muted); width:34px; font-weight:700;">AGORA</span>
+                    <div style="flex:1; height:6px; background:var(--blue-soft); border-radius:6px; overflow:hidden;"><div style="height:100%; width:87%; background:var(--green);"></div></div>
+                    <span style="font-size:6.5px; color:var(--green); font-weight:700; width:38px; text-align:right;">6'20"/km</span>
+                  </div>
+                </div>
+                <div style="font-size:7.5px; color:var(--muted); text-align:center; margin-top:auto;">Sem clube, corrida livre não soma pontos.<br>Entre ou crie um clube pra ver o ranking.</div>
+              </div>
+            </div>
+          </div>
+          <div class="cap"><b>Evolução de ritmo</b>Compara o ritmo (min/km) do desafio mais recente de cada pessoa com o desafio anterior — quem mais melhorou aparece primeiro, com a barra "antes" em cinza e "agora" em verde.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KM 8 — CORRIDA MARCADA ============ -->
     <section class="section" id="agendar" style="padding-left:0; padding-right:0;">
       <div class="section-head reveal">
-        <div class="km-marker" style="justify-content:center;"><span class="dot"></span>KM 7 · Corrida marcada, ninguém esquece</div>
+        <div class="km-marker" style="justify-content:center;"><span class="dot"></span>KM 8 · Corrida marcada, ninguém esquece</div>
         <h2>Combinou, o app lembra por você.</h2>
         <p>Sem clube também dá pra marcar uma corrida — sozinho ou convidando alguém que você achou na comunidade. Aviso automático chega 24h antes e de novo 10 minutos antes do horário combinado.</p>
       </div>
@@ -1376,7 +1474,7 @@
     <!-- ============ KM 8 — TELA DE BLOQUEIO ============ -->
     <section class="section" id="bloqueio" style="padding-left:0; padding-right:0;">
       <div class="section-head reveal">
-        <div class="km-marker" style="justify-content:center;"><span class="dot"></span>KM 8 · No seu pulso, na sua tela</div>
+        <div class="km-marker" style="justify-content:center;"><span class="dot"></span>KM 9 · No seu pulso, na sua tela</div>
         <h2>Não precisa desbloquear o celular pra saber como você vai.</h2>
         <p>No iPhone, a Live Activity ocupa a tela bloqueada com um visual de vidro fosco — "liquid glass" de verdade, com blur e cor por trás. No Android, uma notificação persistente mostra a mesma informação, só que com um visual sólido — o Android ainda não tem esse efeito de vidro nativo.</p>
       </div>
@@ -1435,7 +1533,7 @@
     <!-- ============ KM 9 — DEPOIS DA CORRIDA ============ -->
     <section class="section" id="compartilhar" style="padding-left:0; padding-right:0;">
       <div class="section-head reveal">
-        <div class="km-marker" style="justify-content:center;"><span class="dot"></span>KM 9 · Depois da corrida</div>
+        <div class="km-marker" style="justify-content:center;"><span class="dot"></span>KM 10 · Depois da corrida</div>
         <h2>Pronto pra postar, sem precisar editar nada.</h2>
         <p>Arrasta pro lado e escolhe entre dois formatos de cartão — horizontal ou vertical — antes de salvar. A imagem exportada sai com fundo transparente de verdade, então encaixa em cima de qualquer foto ou cor ao postar nas redes.</p>
       </div>
